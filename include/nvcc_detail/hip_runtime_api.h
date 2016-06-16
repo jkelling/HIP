@@ -371,6 +371,10 @@ inline static hipError_t hipEventDestroy( hipEvent_t event)
     return hipCUDAErrorTohipError(cudaEventDestroy(event));
 }
 
+inline static hipError_t hipEventQuery( hipEvent_t event)
+{
+    return hipCUDAErrorTohipError(cudaEventQuery(event));
+}
 
 inline static hipError_t hipStreamCreateWithFlags(hipStream_t *stream, unsigned int flags)
 {
